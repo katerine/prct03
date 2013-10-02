@@ -1,1 +1,84 @@
 respuestas de la practica 3
+
+18. ¿Qué signiﬁcado tiene la salida? (puts ’Hola Mundo’)
+R/=el puts me muestra por pantalla lo que le quiero pasar para mostrar, si lo paso con comillas simples me interpreta la cadena y sale tal como la escribo y me retorna un valor nil
+
+21. ¿Qu´e diferencia hay entre "\t\n" y ’\t\n’?
+R/= el "\t\n" me sale tal y como yo lo escribe dentro de las comillas no me interpreta.
+El ’\t\n’ me interpreta lo que hay dentro y me salta el tabulador y el retorno de carro.
+
+22. ¿C´omo funciona %q? ¿Qu´e es %q{hello world\n}? ¿Qu´e es %q{’a’ ’b’ ’c’}?
+R/= %q me interpreta lo que halla dentro de la cadena
+%q{hello world\n} me muestra la cadena con el retorno de carro
+%q{’a’ ’b’ ’c’} me da la salida de una cadena de tres caracteres.
+
+
+23. ¿C´omo funciona %Q? ¿Qu´e es %Q{hello world\n}? ¿Qu´e es %Q{"a" "b" "c"}?
+%Q no me interpreta me sale la cadena literal tal y como se la pasamos
+%Q{hello world\n} Me muestra la cadena literalmente no me interpreta el retorno de carro.
+%Q{"a" "b" "c"} me interpreta la salida con un retorno de cada letra por separado.
+
+
+24.¿Qu´e queda en c?
+irb(main):001:0> a = 4
+=> 4
+irb(main):002:0> b =2
+=> 2
+irb(main):003:0> c = <<HERE
+irb(main):004:0" --#{a}--
+irb(main):005:0" --#{b}--
+irb(main):006:0" HERE
+
+Me queda --4--\n--2--\n
+ya que toma los valores dados a las variables.
+
+25. ¿Qu´e queda en c?
+irb(main):001:0> a = 4
+=> 4
+irb(main):002:0> b =2
+=> 2
+irb(main):008:0> c = <<’HERE’
+irb(main):009:0’ --#{a}--
+irb(main):010:0’ --#{b}--
+irb(main):011:0’ HERE
+
+queda en c "--\#{a}--\n--\#{b}--\n" 
+no me toma los valores dados ya que le estoy pasando a c un here con comillas simples que no me interpreta la cadena o los valores pasados.
+
+26. s = "hello". ¿Cu´al es el valor de las siguientes expresiones?
+s[0,2] me enpieza desde el valor cero con dos caracteres por ello la salida es "he"
+s[-1,1] empieza desde la posicion final por el menos y me coje un solo caracter por ello la salida el "o"
+s[0,10] me empieza desde el valor cero con 10 carateres por ello la salida es toda la cadena xq solo tiene 4 caracteres "hello" 
+
+27. ¿Qu´e queda en g?
+>> g = "hello"
+=> "hello"
+>> g << " world"
+en g me queda la concatenacion de la primera cadena que le pase con el = mas la segunda pasada con el operador <<
+
+28. ¿Qu´e queda en e?
+>> e = ’.’*3
+
+esto lo que me hace es una multiplicacion del valor pasado entre comillas es este caso (.) y el resultado es "..."
+
+29. ¿Cu´al es el resultado?
+>> a = 1
+=> 1
+>> "#{a=a+1} "*3
+me queda la cadena "222" ya que me suma el valor de a con uno y me lo muestra tres veces con el operador *
+
+
+
+%w CREA UN ARRARY DE CADENA DE CARACTEERES
+%w EVALUA LO QUE HAY DENTRO
+
+1..4 estan incluidos [1,2,3,4]
+1...4 no esta incluido[1,2,3,4)
+
+
+
+
+
+
+
+
