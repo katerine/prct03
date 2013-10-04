@@ -3,23 +3,23 @@ respuestas de la practica 3
 18. ¿Qué signiﬁcado tiene la salida? (puts ’Hola Mundo’)
 R/=el puts me muestra por pantalla lo que le quiero pasar para mostrar, si lo paso con comillas simples me interpreta la cadena y sale tal como la escribo y me retorna un valor nil
 
-21. ¿Qu´e diferencia hay entre "\t\n" y ’\t\n’?
+21. ¿Que diferencia hay entre "\t\n" y ’\t\n’?
 R/= el "\t\n" me sale tal y como yo lo escribe dentro de las comillas no me interpreta.
 El ’\t\n’ me interpreta lo que hay dentro y me salta el tabulador y el retorno de carro.
 
-22. ¿C´omo funciona %q? ¿Qu´e es %q{hello world\n}? ¿Qu´e es %q{’a’ ’b’ ’c’}?
+22. ¿Como funciona %q? ¿Qu´e es %q{hello world\n}? ¿Qu´e es %q{’a’ ’b’ ’c’}?
 R/= %q me interpreta lo que halla dentro de la cadena
 %q{hello world\n} me muestra la cadena con el retorno de carro
 %q{’a’ ’b’ ’c’} me da la salida de una cadena de tres caracteres.
 
 
-23. ¿C´omo funciona %Q? ¿Qu´e es %Q{hello world\n}? ¿Qu´e es %Q{"a" "b" "c"}?
+23. ¿Como funciona %Q? ¿Qu´e es %Q{hello world\n}? ¿Qu´e es %Q{"a" "b" "c"}?
 %Q no me interpreta me sale la cadena literal tal y como se la pasamos
 %Q{hello world\n} Me muestra la cadena literalmente no me interpreta el retorno de carro.
 %Q{"a" "b" "c"} me interpreta la salida con un retorno de cada letra por separado.
 
 
-24.¿Qu´e queda en c?
+24.¿Que queda en c?
 irb(main):001:0> a = 4
 => 4
 irb(main):002:0> b =2
@@ -32,7 +32,7 @@ irb(main):006:0" HERE
 Me queda --4--\n--2--\n
 ya que toma los valores dados a las variables.
 
-25. ¿Qu´e queda en c?
+25. ¿Que queda en c?
 irb(main):001:0> a = 4
 => 4
 irb(main):002:0> b =2
@@ -45,37 +45,312 @@ irb(main):011:0’ HERE
 queda en c "--\#{a}--\n--\#{b}--\n" 
 no me toma los valores dados ya que le estoy pasando a c un here con comillas simples que no me interpreta la cadena o los valores pasados.
 
-26. s = "hello". ¿Cu´al es el valor de las siguientes expresiones?
+26. s = "hello". ¿Cual es el valor de las siguientes expresiones?
 s[0,2] me enpieza desde el valor cero con dos caracteres por ello la salida es "he"
 s[-1,1] empieza desde la posicion final por el menos y me coje un solo caracter por ello la salida el "o"
 s[0,10] me empieza desde el valor cero con 10 carateres por ello la salida es toda la cadena xq solo tiene 4 caracteres "hello" 
 
-27. ¿Qu´e queda en g?
+27. ¿Que queda en g?
 >> g = "hello"
 => "hello"
 >> g << " world"
 en g me queda la concatenacion de la primera cadena que le pase con el = mas la segunda pasada con el operador <<
 
-28. ¿Qu´e queda en e?
+28. ¿Que queda en e?
 >> e = ’.’*3
 
 esto lo que me hace es una multiplicacion del valor pasado entre comillas es este caso (.) y el resultado es "..."
 
-29. ¿Cu´al es el resultado?
+29. ¿Cual es el resultado?
 >> a = 1
 => 1
 >> "#{a=a+1} "*3
 me queda la cadena "222" ya que me suma el valor de a con uno y me lo muestra tres veces con el operador *
 
+30. ¿Qué es esto? %w[this is a test]
+me da la salida ["this", "is", "a", "test"] me interpreta cada palabra por separado.
+
+31. ¿Qué es esto? %w[\t \n]
+me da la salida ["\\t", "\\n"] me interpreta o evalua lo que hay dentro con el retorno de carro.
+
+32. ¿Qué es esto? %W[\t \n]
+me da la salida ["\t", "\n"] me sale la cadena separando los caracteres.
+
+33. ¿Qué contiene nils? nils = Array.new(3)
+me da la salida [nil, nil, nil] me crea un array de tamaño tres con la palabra nil a la que fue igualada ya que no le paso el valor del array
+
+34. ¿Qué contiene zeros? zeros = Array.new(3, 0)
+salida: [0, 0, 0] me crea un array de tamaño 3 con el valor 0
+
+35. ¿Qué queda en b?
+>> x = [[1,2],[3,4]]
+=> [[1, 2], [3, 4]]
+>> b = Array.new(x)
+salida:[[1, 2], [3, 4]]
+me crea un array dentro de otro array 
+
+36. ¿Qué queda en c?
+
+>> c = Array.new(3) { |i| 2*i }
+salida: [0, 2, 4] me crea un array de tres elementos con un bloque en el que me opera 2 por los indices del array.
+
+37. ¿Cuál es el resultado de cada una de estas operaciones?
+a
+>> a = (’a’..’e’).to_a
+=> ["a", "b", "c", "d", "e"]
+>>a[1,1] 
+=>salida: ["b"]
+>>a[-2,2]  
+=>salida:["d", "e"]
+>>a[0..2] 
+=>salida:["a", "b", "c"]
+>>a[0...1] 
+=>salida:["a", "b"]
+>>a[-2..-1] 
+=>salida:["d", "e"]
+
+con el operador .. me muestra los indices del array ambos incluidos y el ... me muestra los elementos del array segun los indices no incluyendo el ultimo indice
+
+38. ¿Cuál es el resultado de cada una de estas operaciones?
+
+>>a
+=>["a", "b", "c", "d", "e"]
+>>a[0,2] = %w{A B}
+=>["A", "B"]
+>>a
+=> salida:["A", "B", "c", "d", "e"] me cambia las primeras lectras a mayusculas ya que le paso el operador %w
+
+>>a[2..5] = %w{C D E}
+=>["C", "D", "E"]
+>>a
+=>salida:["A", "B", "C", "D", "E"] me cambia solo las de los indices del 2 al 5 incluidos por sus mayusculas
+
+>>a[0,0] = [1,2,3]
+=>[1, 2, 3]
+>>a
+=>salida: [1, 2, 3, "A", "B", "C", "D", "E"] me añade en la posicion cero el array como un solo elemento
+
+>>a[0,2] = []
+=>[]
+>>a
+=> salida:[3, "A", "B", "C", "D", "E"]me saca solo por pantalla del indice 0 su posicion 2
+
+>>a[-1,1] = [ ’Z’ ]
+=>["Z"]
+>>a
+=>salida:[3, "A", "B", "C", "D", "Z"] me cambia el indice -1 un solo valor por Z
+
+=>a[-2,2] = nil
+=>nil
+>>a
+=>salida:[3, "A", "B", "C"] me pone a nulo o elimina desde la posicion -2 dos elementos
+
+da un error porque no le paso valores a la variable a por ello le paso los valores del array ('a..e') para obtener la respuesta de cada una de las operaciones
+
+39. ¿Cuál es el resultado de cada una de estas operaciones?
+a
+>>a = (1...4).to_a
+=>salida:[1, 2, 3] con el operador ... no me incluye el 4
+ 
+>>a = a + [4, 5]
+=>salida: [1, 2, 3, 4, 5] me añade los elementos 4, 5 a mi array
+
+>>a += [[6, 7, 8]]
+=>salida: [1, 2, 3, 4, 5, [6, 7, 8]] me añande un el subarray [6,7,8] a mi array en la ultima posicion.
+>>a = a + 9 me da un error por que no puedo sumar un array a un fixnum
+
+40. ¿Cuál es el resultado de cada una de estas operaciones?
+a
+>> x = %w{a b c b a}
+=> salida: ["a", "b", "c", "b", "a"]me crea un array con los elementos pasados
+
+>> x = x - %w{b c d}
+=>salida: ["a", "a"] me quita de mi array los elementos bcd quedando solo a
 
 
-%w CREA UN ARRARY DE CADENA DE CARACTEERES
-%w EVALUA LO QUE HAY DENTRO
+41. ¿Cuál es el resultado de cada una de estas operaciones?
+a
+>> z = [0]*8
+=> salida:[0, 0, 0, 0, 0, 0, 0, 0] el operador * me muestra 8 veces el valor pasado.
 
-1..4 estan incluidos [1,2,3,4]
-1...4 no esta incluido[1,2,3,4)
+42. ¿Cuál es el resultado de cada una de estas operaciones?
+
+>>a = []
+=>[]
+>>a << 1
+=>salida:[1] me añade el 1 a el array
+>>a << 2 << 3
+=>salida:[1, 2, 3] me añade el 2 y 3 a el array
+>>a << [4, 5, 6]
+=>salida:  [1, 2, 3, [4, 5, 6]] me añade un array en mi array en la ultima posicion
+>>a.concat [7, 8]
+=>salida:[1, 2, 3, [4, 5, 6], 7, 8] me añade a mi array nuevos elementos en la ultima posicion.
+
+43. ¿Cuál es el resultado de cada una de estas operaciones?
+
+>>a =[1, 1, 2, 2, 3, 3, 4]
+=>[1,1, 2, 2, 3, 3, 4]
+>>b =[5,5, 4, 4, 3, 3, 2]
+=>[5, 5, 4, 4, 3, 3, 2]
+>>c = a | b
+=>salida: [1, 2, 3, 4, 5]me hace una union de los dos array empezando en a 
+
+>>d = b | a
+=>salida:[5, 4, 3, 2, 1] me hace una union de los dos array empezando en b
+
+>>e = a & b
+=>salida:[2, 3, 4]me muestra los elementos que son comunes en ambos array  empezando por a
+
+>>f = b & a
+=>salida: [4,3,2] me muestra los elementos que son comunes en ambos array  empezando por a
+
+44. ¿Qué resultados dan las siguientes operaciones?
 
 
+>>a = 1..10
+=>1..10
+>>a.class
+=>Range
+>>a.to_a
+=>salida:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] me crea el array incluyendome todos los elementos 
+
+
+>>b = 1...10
+=>1....10
+>>b.to_a
+=>salida: [1, 2, 3, 4, 5, 6, 7, 8, 9] me crea el array sin incluirme el ultimo elemento
+
+>>b.include? 10
+=>salida: false el operador include me examina si el elemento pertenece o no al array 
+
+>>b.include? 8
+=>salida:true el operador include me examina si el elemento pertenece o no al array 
+
+>>b.step(2) {|x| print "#{x} " }
+13579=> 1...10 me imprime cada 2 el indice del array en este caso salen impar
+>> 1..3.to_a 
+ArgumentError: bad value for range
+
+45. ¿Qué resultados dan las siguientes operaciones?
+
+>>r = 0...100
+=>0....100
+>>r.member? 50
+=>true con el operador member me evalua si ese numero es miembro del array
+>>r.include? 99.9
+=>true con el operador include me evalua si ese numero esta incluidoen el array
+>>r.member? 99.9 con el operador member me evalua si ese numero es miembro del array
+=>true
+
+46. ¿Qué resultados dan las siguientes operaciones?
+
+>>true.class
+=>TrueClass me retorna la clase true
+>>false.class
+=>FalseClass me retorna la clase false
+>>puts "hello" if 0
+=> hello
+=> nil
+>>puts "hello" if nil
+=>nil
+>>puts "hello" if ""
+=>hello
+=> nil
+
+47. ¿Qué resultados dan las siguientes operaciones?
+
+>>x = :sym
+=>:sym
+>>x.class
+=>Symbol
+
+>>x == ’sym’
+=>false
+
+>>x == :sym
+=>true
+>>z = :’a long symbol’
+=>:"a long symbol"
+>>z.class
+=>Symbol
+
+>>x == ’sym’.to_sym
+=>true
+>>x.to_s == ’sym’
+=>true
+
+
+48. ¿Qué resultados se dan?
+
+>> s = "Ruby"
+=> "Ruby"
+>>t = s
+=>"Ruby"
+>>t[-1] = ""
+=>""
+>>print s
+ nil
+>> t = "Java"
+=> "Java"
+>> print s, t
+salida: Rubjava=> nil
+
+49. ¿Cuál es el resultado?
+a
+>> "%d %s" % [3, "rubies"]
+=>"3 rubies"
+
+50. ¿Cuáles son los resultados?
+a
+>> x, y = 4, 5
+=>[4, 5]
+
+>> z = x > y ? x : y
+=>5
+>> x,y,z = [1,2,3]
+=>[1, 2, 3]
+
+51. ¿Qué resultados dan las siguientes operaciones?
+
+>>x = { :a => 1, :b => 2 }
+=>{:b=>2, :a=>1}
+>>x.keys
+=>salida: [:b, :a]
+>>x.values
+=>salida: [2, 1]
+>>x[:c] = 3
+=>3
+>>x
+=>salida:{:b=>2, :c=>3, :a=>1}
+>>x.delete(’a’)
+=>nil
+>>x
+=>salida:{:b=>2, :c=>3, :a=>1}
+
+>>x.delete(:a)
+=>1
+>>x
+=>salida:{:b=>2, :c=>3}
+>>x = { :a => 1, :b => 2, :c => 4 }
+=>{:b=>2, :c=>4, :a=>1}
+>>x.delete_if { |k,v| v % 2 == 0 }
+=>{:a=>1}
+>>x
+=>{:a=>1}
+
+
+52. ¿Que hace yield 4, 5?
+
+yield es un operador que yo hago en el programa para pasarle un bloque en la invocacion o llamada.
+
+53. ¿Qué hace la siguiente sentencia? counts = Hash.new(0) {} ¿Qué diferencia hay con la asignación counts = {}?
+
+54. ¿Qué retorna esta expresió? ’hello world, hello LPP’.scan /\w+/
+/
+
+55. Explique que hacen estas sentencias:
+c = { :a => 3, :b => 2, :c => 1 }  salida:{:b=>2, :c=>1, :a=>3} me crea los hash a,b,c cada uno con su clave y su valor
+c.keys.sort.each { |k| puts c[k] } me ordena las claves de los hash haciendo un iterador
 
 
 
