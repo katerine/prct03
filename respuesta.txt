@@ -1,7 +1,8 @@
 respuestas de la practica 3
 
 18. ¿Qué signiﬁcado tiene la salida? (puts ’Hola Mundo’)
-R/=el puts me muestra por pantalla lo que le quiero pasar para mostrar, si lo paso con comillas simples me interpreta la cadena y sale tal como la escribo y me retorna un valor nil
+R/=el puts me muestra por pantalla lo que le quiero pasar para mostrar, si lo paso con comillas simples me interpreta la
+cadena y sale tal como la escribo y me retorna un valor nil
 
 21. ¿Que diferencia hay entre "\t\n" y ’\t\n’?
 R/= el "\t\n" me sale tal y como yo lo escribe dentro de las comillas no me interpreta.
@@ -43,12 +44,14 @@ irb(main):010:0’ --#{b}--
 irb(main):011:0’ HERE
 
 queda en c "--\#{a}--\n--\#{b}--\n" 
-no me toma los valores dados ya que le estoy pasando a c un here con comillas simples que no me interpreta la cadena o los valores pasados.
+no me toma los valores dados ya que le estoy pasando a c un here con comillas simples que no me interpreta la cadena o
+los valores pasados.
 
 26. s = "hello". ¿Cual es el valor de las siguientes expresiones?
 s[0,2] me enpieza desde el valor cero con dos caracteres por ello la salida es "he"
 s[-1,1] empieza desde la posicion final por el menos y me coje un solo caracter por ello la salida el "o"
-s[0,10] me empieza desde el valor cero con 10 carateres por ello la salida es toda la cadena xq solo tiene 4 caracteres "hello" 
+s[0,10] me empieza desde el valor cero con 10 carateres por ello la salida es toda la cadena xq solo tiene 4 caracteres 
+"hello" 
 
 27. ¿Que queda en g?
 >> g = "hello"
@@ -77,7 +80,8 @@ me da la salida ["\\t", "\\n"] me interpreta o evalua lo que hay dentro con el r
 me da la salida ["\t", "\n"] me sale la cadena separando los caracteres.
 
 33. ¿Qué contiene nils? nils = Array.new(3)
-me da la salida [nil, nil, nil] me crea un array de tamaño tres con la palabra nil a la que fue igualada ya que no le paso el valor del array
+me da la salida [nil, nil, nil] me crea un array de tamaño tres con la palabra nil a la que fue igualada ya que no 
+le paso el valor del array
 
 34. ¿Qué contiene zeros? zeros = Array.new(3, 0)
 salida: [0, 0, 0] me crea un array de tamaño 3 con el valor 0
@@ -145,7 +149,8 @@ con el operador .. me muestra los indices del array ambos incluidos y el ... me 
 >>a
 =>salida:[3, "A", "B", "C"] me pone a nulo o elimina desde la posicion -2 dos elementos
 
-da un error porque no le paso valores a la variable a por ello le paso los valores del array ('a..e') para obtener la respuesta de cada una de las operaciones
+da un error porque no le paso valores a la variable a por ello le paso los valores del array ('a..e') para obtener 
+la respuesta de cada una de las operaciones
 
 39. ¿Cuál es el resultado de cada una de estas operaciones?
 a
